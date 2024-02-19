@@ -542,6 +542,19 @@
         <!-- local scripts -->
         <script type="text/javascript" src="{{ url_for('home.static', filename='scripts/email.js')}}"></script>
         <script defer type="text/javascript" src="{{ url_for('home.static', filename='scripts/htaml.js')}}"></script>
+        <script type="text/javascript">
+            let observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('observer-show')
+                    } else {
+                        entry.target.classList.remove('observer-hide')
+                    }
+                })
+            }, {})
+
+            document.querySelectorAll('.observer').forEach((e) => observer.observe(e))
+        </script>
     </body>
 
 </html>
