@@ -497,7 +497,9 @@
                         </div>
                         <textarea name="message" id="" cols="30" rows="10"></textarea>
                         <p>Message Sent <i class="fa-solid fa-check"></i></p>
-                        <div id="contact__sub"><button>Send Message</button></div>
+                        <div id="contact__sub"><button h-on:trigger="click" h-run:hscript="sendEmail()">Send
+                                Message</button>
+                        </div>
                     </form>
                 </section>
             </section>
@@ -523,14 +525,7 @@
             </div>
         </footer>
 
-        <!-- linkeln profile badge -->
-        <!-- <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark"
-            data-type="VERTICAL" data-vanity="jaedan-willis-280975288" data-version="v1"><a
-                class="badge-base__link LI-simple-link"
-                href="https://ca.linkedin.com/in/jaedan-willis-280975288?trk=profile-badge">Jaedan Willis</a></div> -->
-
         <!-- external links -->
-        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-L18MPLRG8V"></script>
         <script src="https://kit.fontawesome.com/c275cd6b9c.js" crossorigin="anonymous"></script>
